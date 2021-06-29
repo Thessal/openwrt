@@ -231,6 +231,7 @@ comment "C Library"
 
 choice
 	prompt "C Library implementation" if TOOLCHAINOPTS
+	default LIBC_USE_GLIBC if riscv64
 	default LIBC_USE_GLIBC if arc
 	default LIBC_USE_MUSL
 	help

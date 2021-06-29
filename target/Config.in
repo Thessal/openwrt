@@ -98,6 +98,10 @@ config NAND_SUPPORT
 config ARCH_64BIT
 	bool
 
+config riscv64
+	select ARCH_64BIT
+	bool
+
 config VIRTIO_SUPPORT
 	bool
 
@@ -210,6 +214,7 @@ config ARCH
 	default "mips64"    if mips64
 	default "mips64el"  if mips64el
 	default "powerpc"   if powerpc
+	default "riscv64"   if riscv64
 	default "powerpc64" if powerpc64
 	default "sh3"       if sh3
 	default "sh3eb"     if sh3eb
